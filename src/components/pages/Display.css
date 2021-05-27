@@ -1,0 +1,43 @@
+:root {
+  --primary-color: rgb(172, 138, 76);
+}
+* {
+  color: white;
+}
+
+.display-container {
+  display: block;
+  height: auto;
+  background-color: white;
+  padding-top: 10vh;
+}
+.display-hero-text {
+  font-family: "DidoteTextW01-Italic";
+  color: #181818;
+  margin-top: 5vh;
+  font-size: calc(30px + (100 - 30) * ((50vw - 200px) / (1600 - 300)));
+  text-align: center;
+  text-transform: uppercase;
+}
+.display-body {
+  margin: 0 3vw;
+  margin-bottom: 4vh;
+  overflow: hidden;
+  min-height: 60vh;
+}
+.carousel-item {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.carousel-img {
+  max-height: 75vh;
+  width: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .carousel-img {
+    max-height: 75vh;
+    width: 100%;
+  }
+}

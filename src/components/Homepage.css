@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Open+Sans:wght@300&family=Roboto:ital,wght@1,100&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #181818;
+  text-decoration: none;
+}
+.container-home {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.logo-name {
+  position: relative;
+  float: left;
+  margin: 0px 0px 0px 25px;
+}
+.logo-name h6 {
+  font-family: "Amatic SC", cursive;
+  color: #181818;
+  z-index: 1000;
+  font-size: 50px;
+}
+.showcase {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url("/src/static/model3.jpeg") no-repeat center center/cover;
+  /* animation: zoom 7s 1 alternate; */
+}
+.showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 120px 100px 250px #00000093,
+    inset -120px -100px 250px #00000093;
+}
+.sidebar {
+  width: 50px;
+  height: 100vh;
+  position: absolute;
+  bottom: 0;
+}
+.social-links {
+  display: block;
+  width: 50px;
+  text-align: center;
+  position: absolute;
+  bottom: 2%;
+}
+.social-links a img {
+  width: 30px;
+  margin: 10px auto;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.social-links a img:hover {
+  opacity: 0.5;
+}
+.intro-container {
+  z-index: 2;
+  padding: 20px;
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.hero-container {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+}
+.display {
+  position: relative;
+  z-index: 2;
+  height: 150px;
+  margin-left: auto;
+  margin-right: 13vw;
+  width: 400px;
+  text-align: center;
+  color: whitesmoke;
+}
+.display h6 {
+  font-size: 40px;
+  font-weight: 1000;
+  margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  color: rgb(172, 138, 76);
+}
+.display p {
+  border: 1px solid white;
+  color: whitesmoke;
+  width: 240px;
+  margin: auto;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes zoom {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 110% 110%;
+  }
+}
+/* moz-animation: is-scale 25s ease forwards;
+    animation-name: is-scale;
+    animation-duration: 25s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running; */
+
+/*Mobile responsiveness*/
+@media only screen and (max-width: 450px) {
+  .intro-container {
+    padding-bottom: 5px;
+  }
+  .display {
+    margin: auto;
+    width: auto;
+  }
+  .display h6 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .display p {
+    width: 200px;
+  }
+  .sidebar {
+    height: 10vh;
+    width: 100%;
+  }
+  .social-links {
+    position: relative;
+    bottom: 0%;
+    display: flex;
+    width: auto;
+    transform: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+  .social-links a img {
+    margin: 10px 10px;
+  }
+}

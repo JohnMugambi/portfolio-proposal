@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Open+Sans:wght@300&family=Roboto:ital,wght@1,100&display=swap");
+@import url(//db.onlinewebfonts.com/c/16efa2896f117dae2debeb23ab4715dd?family=DidoteTextW01-Italic);
+
+.App {
+  position: relative;
+}
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.fade-appear.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-appear-active.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear 150ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
